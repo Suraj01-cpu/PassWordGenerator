@@ -1,0 +1,112 @@
+<div class="container">
+
+    <!-- ==================== HEADER ==================== -->
+    <h1>Password Generator</h1>
+
+
+    <!-- ==================== PASSWORD DISPLAY ==================== -->
+    <div class="display-container">
+
+        <input type="text" class="display" placeholder="Password" readonly data-password-display>
+
+        <span data-copy-message></span>
+
+        <img src="image\copy.png" alt="Copy password" width="20" height="20" data-copy-button style="margin-top: 10px; cursor: pointer;">
+
+    </div>
+
+
+    <!-- ==================== PASSWORD SETTINGS ==================== -->
+    <div class="input-container">
+
+
+        <!-- ---------- PASSWORD LENGTH ---------- -->
+        <div class="length-container">
+
+            <p>Password Length</p>
+
+            <p data-password-length>0</p>
+
+        </div>
+
+
+        <!-- ---------- LENGTH SLIDER ---------- -->
+        <input type="range" min="1" max="20" step="1" value="10" data-length-slider>
+
+
+        <!-- ---------- UPPERCASE ---------- -->
+        <div class="checkbox-container">
+
+            <input type="checkbox" id="uppercase" data-uppercase>
+
+            <label for="uppercase">
+                Includes Uppercase Letters
+            </label>
+
+        </div>
+
+
+        <!-- ---------- LOWERCASE ---------- -->
+        <div class="checkbox-container">
+
+            <input type="checkbox" id="lowercase" data-lowercase>
+
+            <label for="lowercase">
+                Includes Lowercase Letters
+            </label>
+
+        </div>
+
+
+        <!-- ---------- NUMBERS ---------- -->
+        <div class="checkbox-container">
+
+            <input type="checkbox" id="numbers" data-numbers>
+
+            <label for="numbers">
+                Includes Numbers
+            </label>
+
+        </div>
+
+
+        <!-- ---------- SYMBOLS ---------- -->
+        <div class="checkbox-container">
+
+            <input type="checkbox" id="symbols" data-symbols>
+
+            <label for="symbols">
+                Includes Symbols
+            </label>
+
+        </div>
+
+
+        <!-- ==================== PASSWORD STRENGTH ==================== -->
+        <div class="strength-container">
+
+            <p>Strength</p>
+
+            <!-- Only the circle -->
+            <div class="strength-circle" data-strength-indicator></div>
+
+        </div>
+
+
+        <!-- ==================== GENERATE BUTTON ==================== -->
+        <button type="button" class="generate-button" data-generate-button>
+            GENERATE PASSWORD
+        </button>
+
+
+    </div>
+
+
+    <!-- ==================== JAVASCRIPT ==================== -->
+<script src="index.js"></script>
+<link rel="stylesheet" href="style.css">
+
+</div>
+
+
+

@@ -1,0 +1,446 @@
+/* =====================================================
+   RESET
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =====================================================
+   BODY
+===================================================== */
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            #6b087d 0%,
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            #25145d 0%,
+            transparent 40%
+        ),
+        #120b2b;
+
+    color: white;
+}
+
+
+/* =====================================================
+   MAIN CONTAINER
+===================================================== */
+
+.container {
+    width: 460px;
+}
+
+
+/* =====================================================
+   HEADING
+===================================================== */
+
+.container h1 {
+    text-align: center;
+
+    margin-bottom: 25px;
+
+    font-size: 28px;
+
+    letter-spacing: 2px;
+
+    color: white;
+
+    text-shadow:
+        0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+
+/* =====================================================
+   PASSWORD DISPLAY
+===================================================== */
+
+.display-container {
+    width: 100%;
+
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+
+    margin-bottom: 20px;
+
+    background: #10091f;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.35);
+}
+
+
+/* Password input */
+
+.display {
+    flex: 1;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    color: #ffff00;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+
+/* Copy button */
+
+.display-container img {
+    cursor: pointer;
+
+    width: 23px;
+    height: 23px;
+
+    transition: 0.2s;
+}
+
+.display-container img:hover {
+    transform: scale(1.15);
+}
+
+
+/* =====================================================
+   COPY MESSAGE
+===================================================== */
+
+[data-copy-message] {
+    margin-right: 10px;
+
+    color: #00ffff;
+
+    font-size: 13px;
+
+    opacity: 0;
+}
+
+[data-copy-message].active {
+    opacity: 1;
+}
+
+
+/* =====================================================
+   INPUT CONTAINER
+===================================================== */
+
+.input-container {
+    padding: 25px;
+
+    background: rgba(10, 5, 25, 0.85);
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.45);
+}
+
+
+/* =====================================================
+   PASSWORD LENGTH
+===================================================== */
+
+.length-container {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+.length-container p:first-child {
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+.length-container p:last-child {
+    color: #ffff00;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+
+/* =====================================================
+   RANGE SLIDER
+===================================================== */
+
+input[type="range"] {
+    width: 100%;
+
+    margin-bottom: 25px;
+
+    appearance: none;
+
+    height: 5px;
+
+    border-radius: 10px;
+
+    background: #ddd;
+
+    cursor: pointer;
+}
+
+
+/* Slider thumb */
+
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #ffff00;
+
+    border: none;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 0, 0.5);
+
+    cursor: pointer;
+}
+
+
+/* Firefox */
+
+input[type="range"]::-moz-range-thumb {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    background: #ffff00;
+
+    border: none;
+
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   CHECKBOX CONTAINER
+===================================================== */
+
+.checkbox-container {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 15px;
+
+    font-size: 16px;
+
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   CHECKBOX
+===================================================== */
+
+.checkbox-container input[type="checkbox"] {
+    appearance: none;
+
+    width: 21px;
+    height: 21px;
+
+    border: 2px solid #00ffff;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    position: relative;
+}
+
+
+/* Checked checkbox */
+
+.checkbox-container input[type="checkbox"]:checked {
+    background: #00ffff;
+
+    box-shadow:
+        0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+
+/* Tick */
+
+.checkbox-container input[type="checkbox"]:checked::after {
+    content: "✓";
+
+    position: absolute;
+
+    left: 3px;
+    top: -2px;
+
+    color: #08031a;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+/* Label */
+
+.checkbox-container label {
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   STRENGTH
+===================================================== */
+
+.strength-container {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 25px;
+
+    margin-bottom: 25px;
+}
+
+.strength-container p {
+    font-size: 18px;
+
+    font-weight: 500;
+}
+
+
+/* Strength circle */
+
+.strength-circle {
+    width: 24px;
+    height: 24px;
+
+    border-radius: 50%;
+
+    background-color: gray;
+
+    box-shadow:
+        0 0 10px rgba(255, 255, 255, 0.3);
+
+    transition:
+        background-color 0.3s,
+        box-shadow 0.3s;
+}
+
+
+/* =====================================================
+   GENERATE BUTTON
+===================================================== */
+
+.generate-button {
+    width: 100%;
+
+    height: 55px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: linear-gradient(
+        90deg,
+        #d900ff,
+        #ff00d4
+    );
+
+    color: #ffff00;
+
+    font-size: 17px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 0 #ffff00,
+        0 0 20px rgba(255, 0, 255, 0.35);
+
+    transition: 0.2s;
+}
+
+
+/* Button hover */
+
+.generate-button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 7px 0 #ffff00,
+        0 0 25px rgba(255, 0, 255, 0.6);
+}
+
+
+/* Button click */
+
+.generate-button:active {
+    transform: translateY(3px);
+
+    box-shadow:
+        0 2px 0 #ffff00;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 520px) {
+
+    .container {
+        width: 90%;
+    }
+
+    .container h1 {
+        font-size: 23px;
+    }
+
+    .input-container {
+        padding: 20px;
+    }
+
+}
